@@ -1,0 +1,15 @@
+<project default="jar">
+	<property name="build.jar" value="android-commons.jar"/>
+	<property name="build.src" value="./src"/>
+	<property name="build.dest" value="./bin/classes"/>
+
+	<target name="jar" >
+		<jar destfile="${build.jar}">
+			<fileset
+				dir="${build.src}"/>
+			<fileset
+				dir="${build.dest}"
+				excludes="**/R.class" />
+		</jar>
+	</target>
+</project>
